@@ -34,10 +34,10 @@ public class CalculoDepreciacionActivos {
 			valordesecho=lector.nextDouble();
 			System.out.println("Ingrese la vida util.");
 			vidautil=lector.nextDouble();
-			depreacum=costact-cosa;
 			cosa= (costact-valordesecho)/vidautil;
-			System.out.println("Su depresiacion anual es:" + cosa);
-			System.out.println("Su depresion acumulada es: " + depreacum);
+			depreacum= (costact-cosa);
+			System.out.println("Su depreciacion anual es:" + cosa);
+			System.out.println("Su depreciacion acumulada en el primere año es: " + depreacum);
 		
 			
 			break;
