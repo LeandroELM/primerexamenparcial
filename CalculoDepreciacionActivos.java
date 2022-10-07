@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class CalculoDepreciacionActivos {
 	static double costdelact;
+	static double depreacum;
 	static double vidautil;
 	static Scanner lector=new Scanner(System.in);
 	public static void main(String[] args) {
@@ -33,9 +34,10 @@ public class CalculoDepreciacionActivos {
 			valordesecho=lector.nextDouble();
 			System.out.println("Ingrese la vida util.");
 			vidautil=lector.nextDouble();
-			
+			depreacum=costact-cosa;
 			cosa= (costact-valordesecho)/vidautil;
 			System.out.println("Su depresiacion anual es:" + cosa);
+			System.out.println("Su depresion acumulada es: " + depreacum);
 		
 			
 			break;
