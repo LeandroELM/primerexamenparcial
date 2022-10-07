@@ -3,6 +3,8 @@ package Examen;
 import java.util.Scanner;
 
 public class CalculoDepreciacionActivos {
+	static double costdelact;
+	static double vidautil;
 	static Scanner lector=new Scanner(System.in);
 	public static void main(String[] args) {
 		double DepreAnual;
@@ -16,22 +18,31 @@ public class CalculoDepreciacionActivos {
 		System.out.println("4.Metodo de reduccion de saldos.");
 		int op = lector.nextInt();
 		
-		switch(op) {
+		switch (op) {
+		
+		case 1: {
+			System.out.println("Que desea depresiar?");
+			
+			
+			
+		}
+		
+	
 		
 		
-		case:1 
-				
-				
-				
-				
-
 		
 		
 		
 		}
-		
-		
 
+
+	}
+	private static double MetododelineaRecta(double costdelact,double vidautil) {
+		double resultado;
+		
+		return double costdelact;
+		
+		
 	}
 		
 		
