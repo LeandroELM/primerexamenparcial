@@ -22,11 +22,29 @@ public class CalculoDepreciacionActivos {
 		
 		case 1: {
 			System.out.println("Que desea depresiar?");
+			break;
+			
+			
+		}
+		case 2:{
+			System.out.println("Que desea depresiar?");
+			break;
 			
 			
 			
 		}
-		
+		case 3:{
+			System.out.println("Que desea depresiar?");
+			break;
+			
+			
+		}
+		case 4:{
+			System.out.println("Que desea depresiar?");
+			break;
+			
+			
+		}
 	
 		
 		
@@ -37,10 +55,7 @@ public class CalculoDepreciacionActivos {
 
 
 	}
-	private static double MetododelineaRecta(double costdelact,double vidautil) {
-		double resultado;
-		
-		return double costdelact;
+	
 		
 		
 	}
@@ -49,4 +64,4 @@ public class CalculoDepreciacionActivos {
 		
 	
 
-}
+
