@@ -3,12 +3,11 @@ package Examen;
 import java.util.Scanner;
 
 public class CalculoDepreciacionActivos {
-	static double costdelact;
-	static double depreacum;
-	static double vidautil;
+	
 	static Scanner lector=new Scanner(System.in);
 	public static void main(String[] args) {
-		
+		double costact, depreporuniprod, frac;
+        int vidautil, valordesecho,valorresi,tasadoblesal, impordepre, vidautiluni;
 		
 		System.out.println("---------------Bienvenido-------------");
 		System.out.println();
@@ -25,31 +24,23 @@ public class CalculoDepreciacionActivos {
 		switch (op) {
 		
 		case 1: {
-			System.out.println("Que desea depresiar?");
-			double cosa = lector.nextDouble();
-			double costact,valordesecho,vidautil;
+			
 			System.out.println("Ingrese el costo del activo");
 			costact=lector.nextDouble();
 			System.out.println("Ingrese el valor de desecho.");
-			valordesecho=lector.nextDouble();
+			valordesecho=lector.nextInt();
 			System.out.println("Ingrese la vida util.");
-			vidautil=lector.nextDouble();
-			cosa= (costact-valordesecho)/vidautil;
-			depreacum= (costact-cosa);
-			System.out.println("Su depreciacion anual es:" + cosa);
-			System.out.println("Su depreciacion acumulada en el primere año es: " + depreacum);
-		
-			
+			vidautil= lector.nextInt();
+			System.out.println("Su depreciacion anual es:" + MtdelineaRecta(costact, valordesecho, vidautil));
 			break;
-			
-			
 		}
 		case 2:{
-			System.out.println("Que desea depresiar?");
-			break;
-			
-			
-			
+			System.out.println("Ingrese el valor del importe depreciable");
+			impordepre=lector.nextInt();
+			System.out.println("Ingrese la fraccion");
+			frac=lector.nextDouble();
+			System.out.println("La depreciacion anual por este metodo es de: " + MtdelasumadeDigitosporaños(impordepre, frac));	
+			break;	
 		}
 		case 3:{
 			System.out.println("Que desea depresiar?");
@@ -63,21 +54,27 @@ public class CalculoDepreciacionActivos {
 			
 			
 		}
-	
 		
-		
-		
-		
-		
+			
+			
+			
 		}
 
-
 	}
-	
-		
-		
+		private static double MtdelineaRecta( double costact , int valordesecho, int vidautil) {
+	      	  double depreciacionanual;
+	      	  
+	      	  depreciacionanual = (costact - valordesecho) / (vidautil);
+				return depreciacionanual;
 	}
-		
+		 private static double MtdelasumadeDigitosporaños(int importdepre , double frac) {
+       	  double  depreciacionanual;
+       	  
+       	  depreciacionanual = importdepre * frac;
+       	 
+			return depreciacionanual;
+		 }
+}
 		
 		
 	
