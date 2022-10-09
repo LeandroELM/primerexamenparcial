@@ -96,6 +96,7 @@ public class CalculoDepreciacionActivos {
 			 private static double MtporReducdeSaldos(double costact, int valorsalv, double vidautil) {
 				 double depreciacionanual,residuo;
 				 depreciacionanual= 1-(valorsalv/costact);Math.pow(vidautil, 1); 
+				 residuo=depreciacionanual*(-100);
 				 residuo=depreciacionanual*costact;
 				 
 				 
