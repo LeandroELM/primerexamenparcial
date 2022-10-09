@@ -6,7 +6,7 @@ public class CalculoDepreciacionActivos {
 	
 	static Scanner lector=new Scanner(System.in);
 	public static void main(String[] args) {
-		  double costact, frac;
+		 double costact, frac;
 	        int vidautil, valordesecho,valorsalva,valoract, impordepre, vidautiluni;
 			
 			System.out.println("---------------Bienvenido-------------");
@@ -59,8 +59,9 @@ public class CalculoDepreciacionActivos {
 				costact=lector.nextDouble();
 				System.out.println("Ingrese el valor de salvamento.");
 				valorsalva=lector.nextInt();
+				System.out.println("Ingrese el valor activo");
 				valoract=lector.nextInt();
-				System.out.println("La depreciacion anula por este metodo es de: " + MtporReducdeSaldos(costact, valorsalva, valoract));
+				System.out.println("La depreciacion anual por este metodo es de: " + MtporReducdeSaldos(costact, valorsalva, valoract));
 				break;
 				
 				
@@ -70,7 +71,7 @@ public class CalculoDepreciacionActivos {
 				
 				
 			}
-
+			 System.out.println("Hice lo que pude :D");
 		}
 			private static double MtdelineaRecta( double costact , int valordesecho, int vidautil) {
 		      	  double depreciacionanual;
@@ -92,13 +93,17 @@ public class CalculoDepreciacionActivos {
 				 
 				 return depreciacionanual;
 			 } 
-			 private static double MtporReducdeSaldos(double castact, int valorsalv, double valoract) {
-				 double depreciacionanual;
-				 depreciacionanual= 1-(valorsalv/valoract);Math.pow(1, valoract);
+			 private static double MtporReducdeSaldos(double costact, int valorsalv, double vidautil) {
+				 double depreciacionanual,residuo;
+				 depreciacionanual= 1-(valorsalv/costact);Math.pow(vidautil, 1); 
+				 residuo=depreciacionanual*costact;
 				 
 				 
-				 return depreciacionanual;
+				 return residuo;
+				
 			 }
-}
+			 
+			 }
+
 
 
